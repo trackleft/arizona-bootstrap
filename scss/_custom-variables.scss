@@ -1,1 +1,102 @@
-// Override Bootstrap variables here.
+//
+// > COLORS
+//
+
+//
+// >> Brand Colors
+//
+$red: #ab0520;
+$bloom: #ef4056;
+$chili: #8b0015;
+
+$blue: #0c234b;
+$sky: #81d3eb;
+$oasis: #378dbd;
+$azurite: #1e5288;
+$midnight: #001c48;
+
+$cool-gray: #e2e9eb;
+$warm-gray: #f4ede5;
+
+$leaf: #70b865;
+$river: #007d84;
+$silver: #9eabae;
+$mesa: #a95c42;
+
+$ash: #403635;
+$sage: #4a634e;
+
+$white: #fff;
+$black: #000;
+
+/* $gray-100: $cool-gray;
+$gray-200: $cool-gray;
+$gray-300: $cool-gray;
+$gray-400: $cool-gray;
+$gray-500: $cool-gray;
+$gray-600: $silver;
+$gray-700: $ash;
+$gray-800: $ash;
+$gray-900: $ash; */
+
+$colors: ();
+$colors: map-merge(
+  (
+    "red":   $red,
+    "bloom":   $bloom,
+    "chili":   $chili,
+    "blue":    $blue,
+    "sky":     $sky,
+    "oasis":   $oasis,
+    "azurite":     $azurite,
+    "midnight":    $midnight,
+    "cool-gray":   $cool-gray,
+    "warm-gray":   $warm-gray,
+    "leaf":    $leaf,
+    "river":   $river,
+    "silver":  $silver,
+    "mesa":    $mesa,
+    "ash":     $ash,
+    "sage":    $sage,
+    "white":    $white,
+    "black":    $black,
+  ),
+  $colors
+);
+
+//
+// >> Theme Colors
+//
+$primary: $red;
+$secondary: $blue;
+$success: $leaf;
+$info: $sky;
+$warning: $bloom;
+$danger: $chili;
+
+/* $light: $cool-gray;
+$dark: $ash; */
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger
+  ),
+  $theme-colors
+);
+
+
+
+//
+// > FONTS
+//
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      MiloWeb-Text, Verdana, Geneva, sans-serif !default;
+$font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+

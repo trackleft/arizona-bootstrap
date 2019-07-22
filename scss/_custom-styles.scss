@@ -1,1 +1,21 @@
-// Define additional styles here.
+
+// > COLOR CLASSES
+
+//
+// >> Text Color
+//
+//
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+//
+// >> Background Color
+//
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}

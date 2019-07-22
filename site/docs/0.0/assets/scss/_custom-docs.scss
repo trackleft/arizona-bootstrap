@@ -1,0 +1,90 @@
+// Overrides specific to the docs
+
+//
+// > NAV
+//
+//
+// >> Navbar
+//
+.bd-navbar {
+  background-color: $white;
+  border-bottom: 1px solid $cool_gray;
+
+  .navbar-nav {
+    align-items: stretch;
+    align-self: stretch;
+
+    .nav-item {
+      display: flex;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      color: $azurite;
+
+      &.active,
+      &:active,
+      &:hover {
+        color: $midnight;
+      }
+      &.active,
+      &:active {
+        background-color: $cool_gray;
+      }
+    }
+  }
+}
+//
+// >> Sidebar
+//
+.bd-toc-item {
+  &.active {
+    .bd-toc-link {
+      color: $midnight;
+      background-color: $silver;
+    }
+
+    &:hover {
+      .bd-toc-link {
+        background-color: $silver;
+      }
+    }
+  }
+
+  .bd-toc-link {
+    padding: .75rem 1rem;
+    color: $azurite;
+
+    &:hover {
+      color: $midnight;
+      background-color: $cool_gray;
+    }
+  }
+}
+
+.bd-sidenav,
+.bd-sidebar {
+  li {
+    a {
+      color: $midnight;
+    }
+  }
+  .nav {
+    // included for docs specifically
+    .bd-sidenav-active {
+      a {
+        background-color: $cool_gray;
+      }
+
+      &:hover {
+        a {
+          background-color: $cool_gray;
+        }
+      }
+    }
+  }
+}
+
+
