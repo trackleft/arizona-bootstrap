@@ -5,8 +5,8 @@ description: Get started with Arizona Bootstrap, the University of Arizona's the
 group: getting-started
 redirect_from:
   - "/docs/"
-  - "/docs/4.3/"
-  - "/docs/4.3/getting-started/"
+  - "/docs/0.0/"
+  - "/docs/0.0/getting-started/"
   - "/docs/getting-started/"
   - "/getting-started/"
 toc: true
