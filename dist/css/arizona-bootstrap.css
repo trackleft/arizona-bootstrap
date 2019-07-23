@@ -1,14 +1,3 @@
-/* $gray-100: $cool-gray;
-$gray-200: $cool-gray;
-$gray-300: $cool-gray;
-$gray-400: $cool-gray;
-$gray-500: $cool-gray;
-$gray-600: $silver;
-$gray-700: $ash;
-$gray-800: $ash;
-$gray-900: $ash; */
-/* $light: $cool-gray;
-$dark: $ash; */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -57,8 +46,8 @@ $dark: $ash; */
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: MiloWeb-Text, Verdana, Geneva, sans-serif;
+  --font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 *,
@@ -80,7 +69,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: MiloWeb-Text, Verdana, Geneva, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -207,7 +196,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -5972,7 +5961,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: MiloWeb-Text, Verdana, Geneva, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6085,7 +6074,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: MiloWeb-Text, Verdana, Geneva, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9753,7 +9742,7 @@ button.bg-dark:focus {
 }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
 }
 
 .text-justify {
@@ -10060,6 +10049,266 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.text-blue {
+  color: #0c234b;
+}
+
+.text-indigo {
+  color: #6610f2;
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+.text-pink {
+  color: #e83e8c;
+}
+
+.text-red {
+  color: #ab0520;
+}
+
+.text-orange {
+  color: #fd7e14;
+}
+
+.text-yellow {
+  color: #ffc107;
+}
+
+.text-green {
+  color: #28a745;
+}
+
+.text-teal {
+  color: #20c997;
+}
+
+.text-cyan {
+  color: #17a2b8;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray {
+  color: #6c757d;
+}
+
+.text-gray-dark {
+  color: #343a40;
+}
+
+.text-bloom {
+  color: #ef4056;
+}
+
+.text-chili {
+  color: #8b0015;
+}
+
+.text-sky {
+  color: #81d3eb;
+}
+
+.text-oasis {
+  color: #378dbd;
+}
+
+.text-azurite {
+  color: #1e5288;
+}
+
+.text-midnight {
+  color: #001c48;
+}
+
+.text-cool-gray {
+  color: #e2e9eb;
+}
+
+.text-warm-gray {
+  color: #f4ede5;
+}
+
+.text-leaf {
+  color: #70b865;
+}
+
+.text-river {
+  color: #007d84;
+}
+
+.text-silver {
+  color: #9eabae;
+}
+
+.text-mesa {
+  color: #a95c42;
+}
+
+.text-ash {
+  color: #403635;
+}
+
+.text-sage {
+  color: #4a634e;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bg-blue {
+  background-color: #0c234b;
+}
+
+.bg-indigo {
+  background-color: #6610f2;
+}
+
+.bg-purple {
+  background-color: #6f42c1;
+}
+
+.bg-pink {
+  background-color: #e83e8c;
+}
+
+.bg-red {
+  background-color: #ab0520;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+.bg-green {
+  background-color: #28a745;
+}
+
+.bg-teal {
+  background-color: #20c997;
+}
+
+.bg-cyan {
+  background-color: #17a2b8;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #6c757d;
+}
+
+.bg-gray-dark {
+  background-color: #343a40;
+}
+
+.bg-bloom {
+  background-color: #ef4056;
+}
+
+.bg-chili {
+  background-color: #8b0015;
+}
+
+.bg-sky {
+  background-color: #81d3eb;
+}
+
+.bg-oasis {
+  background-color: #378dbd;
+}
+
+.bg-azurite {
+  background-color: #1e5288;
+}
+
+.bg-midnight {
+  background-color: #001c48;
+}
+
+.bg-cool-gray {
+  background-color: #e2e9eb;
+}
+
+.bg-warm-gray {
+  background-color: #f4ede5;
+}
+
+.bg-leaf {
+  background-color: #70b865;
+}
+
+.bg-river {
+  background-color: #007d84;
+}
+
+.bg-silver {
+  background-color: #9eabae;
+}
+
+.bg-mesa {
+  background-color: #a95c42;
+}
+
+.bg-ash {
+  background-color: #403635;
+}
+
+.bg-sage {
+  background-color: #4a634e;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-gray-100 {
+  background-color: #f8f9fa;
+}
+
+.bg-gray-200 {
+  background-color: #e9ecef;
+}
+
+.bg-gray-300 {
+  background-color: #dee2e6;
+}
+
+.bg-gray-400 {
+  background-color: #ced4da;
+}
+
+.bg-gray-500 {
+  background-color: #adb5bd;
+}
+
+.bg-gray-600 {
+  background-color: #6c757d;
+}
+
+.bg-gray-700 {
+  background-color: #495057;
+}
+
+.bg-gray-800 {
+  background-color: #343a40;
+}
+
+.bg-gray-900 {
+  background-color: #212529;
 }
 
 .navbar {

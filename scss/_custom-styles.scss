@@ -19,3 +19,20 @@
     background-color: $value;
   }
 }
+
+//
+// >>> Gray Background Color
+//
+@each $color, $value in $grays {
+  $background: $value;
+  $text-color: $black;
+    
+  // check for color contrast
+  @if $color == "600" or $color == "700" or $color == "800" or $color == "900" {
+    $text-color: $white;
+  }
+
+  .bg-gray-#{$color} {
+    background-color: $background;
+  }
+}

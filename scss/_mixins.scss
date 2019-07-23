@@ -7,10 +7,7 @@
   // check for inaccessible color contrast
   $alert-text-color: $white;
 
-  @if $background == $sky {
-    $alert-text-color: $midnight;
-  }
-  @else if $background == $leaf {
+  @if $background == $sky or $background == $leaf {
     $alert-text-color: $midnight;
   }
   @else if $background == $bloom {

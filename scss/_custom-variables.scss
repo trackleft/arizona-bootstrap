@@ -29,17 +29,9 @@ $sage: #4a634e;
 $white: #fff;
 $black: #000;
 
-/* $gray-100: $cool-gray;
-$gray-200: $cool-gray;
-$gray-300: $cool-gray;
-$gray-400: $cool-gray;
-$gray-500: $cool-gray;
-$gray-600: $silver;
-$gray-700: $ash;
-$gray-800: $ash;
-$gray-900: $ash; */
 
 $colors: ();
+// remove base Bootstrap colors
 $colors: map-merge(
   (
     "red":   $red,
@@ -74,8 +66,6 @@ $info: $sky;
 $warning: $bloom;
 $danger: $chili;
 
-/* $light: $cool-gray;
-$dark: $ash; */
 $theme-colors: ();
 $theme-colors: map-merge(
   (
@@ -87,6 +77,38 @@ $theme-colors: map-merge(
     "danger":     $danger
   ),
   $theme-colors
+);
+@debug map-has-key($theme-colors, "light");
+// $colors: map-remove($colors, "light", "dark");
+
+
+//
+// >> Grayscale Colors
+//
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$grays: ();
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
 );
 
 
