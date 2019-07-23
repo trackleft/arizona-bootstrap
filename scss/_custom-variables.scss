@@ -31,7 +31,6 @@ $black: #000;
 
 
 $colors: ();
-// remove base Bootstrap colors
 $colors: map-merge(
   (
     "red":   $red,
@@ -118,7 +117,43 @@ $grays: map-merge(
 //
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      MiloWeb-Text, Verdana, Geneva, sans-serif !default;
-$font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+// $font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
+// $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
+
+
+//
+// > COMPONENTS
+//
+
+// >> Cards
+$card-cap-bg: $gray-200;
+$card-cap-bg-darken: rgba($black, .075);
+
+// >> Dropdowns
+$dropdown-link-color: $azurite;
+$dropdown-link-hover-color: $midnight;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-active-bg: $cool-gray;
+
+// >> Navs
+$nav-link-color: $azurite;
+$nav-link-hover-color: $midnight;
+$nav-link-active-color: $midnight;
+$nav-link-active-bg: $cool-gray;
+
+$nav-pills-link-active-color: $midnight;
+$nav-pills-link-active-bg: $cool-gray;
+
+// >> Navbar
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-y: 1.25rem;
+$navbar-nav-link-padding-x: 1.5rem;
+
+$navbar-light-border-color: $cool-gray;
+$navbar-light-border-width: 1px 0;
+$navbar-light-link-color: $azurite;
+$navbar-light-link-active-color: $midnight;
+$navbar-light-link-active-bg: $cool-gray;
+$navbar-light-link-hover-bg: $gray-100;

@@ -24,3 +24,43 @@
     border-top-color: $alert-text-color;
   }
 }
+
+
+//
+// > BADGES
+//
+@mixin badge-variant($background) {
+  // check for inaccessible color contrast
+  $badge-text-color: $white;
+
+  @if $background == $sky or $background == $leaf {
+    $badge-text-color: $midnight;
+  }
+  @else if $background == $bloom {
+    $badge-text-color: $black;
+  }
+
+  color: $badge-text-color;
+  background-color: $background;
+}
+
+
+//
+// > BUTTONS
+//
+
+// >> Regular
+@mixin button-variant($background) {
+  // check for inaccessible color contrast
+  $button-text-color: $white;
+
+  @if $background == $sky or $background == $leaf {
+    $button-text-color: $midnight;
+  }
+  @else if $background == $bloom {
+    $button-text-color: $black;
+  }
+
+  color: $button-text-color;
+}
+

@@ -28,14 +28,13 @@
       &:active,
       &:hover {
         color: $midnight;
-      }
-      &.active,
-      &:active {
         background-color: $cool_gray;
       }
     }
   }
 }
+
+
 //
 // >> Sidebar
 //
@@ -43,12 +42,12 @@
   &.active {
     .bd-toc-link {
       color: $midnight;
-      background-color: $silver;
+      background-color: $gray-400;
     }
 
     &:hover {
       .bd-toc-link {
-        background-color: $silver;
+        background-color: $gray-400;
       }
     }
   }
@@ -81,6 +80,14 @@
       &:hover {
         a {
           background-color: $cool_gray;
+        }
+      }
+    }
+    li {
+      a {
+        &:hover {
+          color: $midnight;
+          background-color: $gray-100;
         }
       }
     }
