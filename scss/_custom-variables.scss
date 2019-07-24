@@ -108,15 +108,20 @@ $grays: map-merge(
   $grays
 );
 
+//
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
 
+$enable-rounded: false;
 
 //
 // > FONTS
 //
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      MiloWeb-Text, Verdana, Geneva, sans-serif !default;
-// $font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
-// $font-family-base:            $font-family-sans-serif !default;
+$font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 
