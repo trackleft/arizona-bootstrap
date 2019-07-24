@@ -95,3 +95,26 @@
 }
 
 
+//
+// > LAYOUT
+//
+.bd-example-container-header {
+  background-color: $blue;
+}
+.bd-example-container-sidebar {
+  background-color: $bloom;
+}
+.bd-example-container-body {
+  background-color: $river;
+}
+
+.bd-example-row .row>.col,
+.bd-example-row .row>[class^=col-] {
+  background-color: $cool-gray;
+  border-color: $gray-400;
+}
+
+.bd-example-row-flex-cols .row {
+  background-color: rgba($bloom, .1);
+}
+
