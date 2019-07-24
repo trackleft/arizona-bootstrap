@@ -34,7 +34,6 @@
     // check for color contrast
     @if $value == $sky or $value == $oasis or $value == $cool-gray or $value == $warm-gray or $value == $silver or $value == $leaf {
       color: $midnight;
-      span,
       p,
       h1,
       h2,
@@ -47,7 +46,6 @@
     }
     @else if $value == $bloom or $value == $white {
       color: $black;
-      span,
       p,
       h1,
       h2,
@@ -60,7 +58,6 @@
     }
     @else {
       color: $white;
-      span,
       p,
       h1,
       h2,
@@ -78,7 +75,6 @@
     // check for color contrast
     @if $value == $sky or $value == $leaf {
       color: $midnight;
-      span,
       p,
       h1,
       h2,
@@ -91,7 +87,6 @@
     }
     @else if $value == $bloom {
       color: $black;
-      span,
       p,
       h1,
       h2,
@@ -104,7 +99,6 @@
     }
     @else {
       color: $white;
-      span,
       p,
       h1,
       h2,
@@ -132,6 +126,43 @@
   }
 
   .bg-gray-#{$color} {
+    color: $text-color;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $text-color;
+    }
     background-color: $background;
   }
+}
+
+.bg-light {
+  color: $black;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $black;
+  }
+  background-color: $light;
+}
+.bg-dark {
+  color: $white;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+  background-color: $dark;
 }
