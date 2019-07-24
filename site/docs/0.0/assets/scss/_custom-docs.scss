@@ -108,8 +108,8 @@
   background-color: $river;
 }
 
-.bd-example-row .row>.col,
-.bd-example-row .row>[class^=col-] {
+.bd-example-row .row > .col,
+.bd-example-row .row > [class^="col-"] {
   background-color: $cool-gray;
   border-color: $gray-400;
 }
