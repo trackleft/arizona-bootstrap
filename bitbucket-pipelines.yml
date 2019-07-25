@@ -14,8 +14,8 @@ pipelines:
             - aws configure set preview.cloudfront true
             - aws s3 sync --cache-control max-age=691200 dist/ s3://${AWS_S3_BUCKET_CDN}/lib/arizona-bootstrap/${BITBUCKET_TAG}/
             - aws s3 sync --cache-control max-age=691200 dist/ s3://${AWS_S3_BUCKET_CDN}/lib/arizona-bootstrap/latest/
-            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/review/${BITBUCKET_TAG}/
-            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/review/latest/
+            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/arizona-bootstrap-review/${BITBUCKET_TAG}/
+            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/arizona-bootstrap-review/latest/
             - aws s3 sync --cache-control max-age=691200 _site/ s3://${AWS_S3_BUCKET_UADIGITAL}/arizona-bootstrap/
             - aws cloudfront create-invalidation --distribution-id $CF_DISTRO_ID --paths /lib/arizona-bootstrap/latest/*
             - git config --global user.name "$BITBUCKET_REPO_OWNER"
@@ -33,7 +33,7 @@ pipelines:
             - aws configure set preview.cloudfront true
             - aws s3 sync --cache-control max-age=691200 dist/ s3://${AWS_S3_BUCKET_CDN}/lib/arizona-bootstrap/master/
             - npm run docs
-            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/review/master/
+            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/arizona-bootstrap-review/master/
             - aws cloudfront create-invalidation --distribution-id $CF_DISTRO_ID --paths /lib/arizona-bootstrap/master/*
     UADIGITAL*:
       - step:
@@ -45,4 +45,4 @@ pipelines:
             - npm run docs
             - export BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
             - export COMMIT_MSG=$(git log -1 --pretty=%B)
-            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/review/${BRANCH}/
+            - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/arizona-bootstrap-review/${BRANCH}/
