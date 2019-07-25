@@ -1,5 +1,5 @@
 # Ignore docs files
-/_s3/
+/_site/
 /site/.jekyll-metadata
 /site/docs/**/dist/
 

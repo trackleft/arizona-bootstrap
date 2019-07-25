@@ -10,7 +10,7 @@ permalink:      pretty
 
 # Server
 source:         "site"
-destination:    ./_s3
+destination:    ./_site
 host:           "localhost"
 port:           9001
 baseurl:        ""
