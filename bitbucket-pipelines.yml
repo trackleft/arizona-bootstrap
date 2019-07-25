@@ -20,9 +20,6 @@ pipelines:
             - aws cloudfront create-invalidation --distribution-id $CF_DISTRO_ID --paths /lib/arizona-bootstrap/latest/*
             - git config --global user.name "$BITBUCKET_REPO_OWNER"
             - git config --global user.email "noreply@bitbucket.org"
-            #- export UABOOTSTRAP_UAQS_REPO="https://x-token-auth:${access_token}@bitbucket.org/ua_drupal/ua_quickstart"
-            #- export UABOOTSTRAP_NEW_TAG=$BITBUCKET_TAG
-            #- yarn run update-uazen
 
   branches:
     master:
@@ -46,12 +43,6 @@ pipelines:
             - npm install
             - bundle install
             - npm run docs
-            #- npm run dist
             - export BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
             - export COMMIT_MSG=$(git log -1 --pretty=%B)
             - aws s3 sync _site/ s3://${AWS_S3_BUCKET}/review/${BRANCH}/
-            #- yarn run slack previewReady
-            #- gulp test:pipeline || true
-            #- aws s3 sync backstop_data/ s3://${AWS_S3_BUCKET}/review/${BRANCH}/backstop_data/
-            #- yarn run slack backstop
-            #- yarn run slack webaim
