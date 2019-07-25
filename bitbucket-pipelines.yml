@@ -1,4 +1,4 @@
-image: uadigital/arizona-node-base:0.0.1
+image: uadigital/arizona-node-base:0.0.2
 pipelines:
   tags:
     '*':
