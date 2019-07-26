@@ -10744,42 +10744,34 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn-primary {
   color: #fff;
-  background-color: #ab0520;
 }
 
 .btn-secondary {
   color: #fff;
-  background-color: #0c234b;
 }
 
 .btn-success {
   color: #001c48;
-  background-color: #70b865;
 }
 
 .btn-info {
   color: #001c48;
-  background-color: #81d3eb;
 }
 
 .btn-warning {
-  color: #fff;
-  background-color: #f19e1f;
+  color: #000;
 }
 
 .btn-danger {
   color: #fff;
-  background-color: #a95c42;
 }
 
 .btn-light {
   color: #fff;
-  background-color: #dee2e6;
 }
 
 .btn-dark {
   color: #fff;
-  background-color: #212529;
 }
 
 .btn-success:hover,
@@ -10797,6 +10789,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn-outline-info {
   color: #1e5288;
+}
+
+.btn-outline-warning {
+  color: #403635;
 }
 
 .btn-outline-warning:hover {

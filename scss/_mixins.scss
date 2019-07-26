@@ -58,7 +58,7 @@
   @if $background == $sky or $background == $leaf {
     $button-text-color: $midnight;
   }
-  @else if $background == $bloom {
+  @else if $background == $warning {
     $button-text-color: $black;
   }
 

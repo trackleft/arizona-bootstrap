@@ -3,7 +3,7 @@
 @each $color, $value in $theme-colors {
   // increased specificity to .btn.btn-* to ensure overrides takes prescidence
   .btn-#{$color} {
-    @include badge-variant($value);
+    @include button-variant($value);
   }
 }
 
@@ -29,6 +29,7 @@
   color: $azurite;
 }
 .btn-outline-warning {
+  color: $ash;
   &:hover {
     color: $black;
   }
