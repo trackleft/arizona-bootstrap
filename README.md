@@ -54,7 +54,7 @@ proposing changes through issue branches and pull requests on
 QuickStart. If you have permissions to access it, you should work from the main
 repository, cloning it to your own environment with the
 ```
-git clone git@bitbucket.org:uadigital/ua-bootstrap.git
+git clone git@bitbucket.org:uadigital/arizona-bootstrap.git
 ```
 command. If not, you will need to fork your own copy of the  Arizona Bootstrap
 repository on Bitbucket, then work from a local clone of that fork.
