@@ -62,6 +62,26 @@ jobs:
             unset GIT_SSH_COMMAND
             rm ${HOME}/.ssh/az_digital_deploy_key
           )
+      - name: Update packagist
+        # When we figure out the repository_dispatch event, we should do that here
+        # to notify digital.arizona.edu of a new version.
+        if: ${{ endsWith(env.AZ_VERSION, '-dev') == false }}
+        run: |
+          (
+            echo "${{ secrets.AZ_BOOTSTRAP_PACKAGIST_DEPLOY_KEY }}" > ${HOME}/.ssh/az_bootstrap_packagist_deploy_key
+            chmod 600 ${HOME}/.ssh/az_bootstrap_packagist_deploy_key
+            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+            git config --global user.name "${GITHUB_ACTOR}"
+            export GIT_SSH_COMMAND="ssh -i ${HOME}/.ssh/az_bootstrap_packagist_deploy_key"
+            git clone git@github.com:az-digital/arizona-bootstrap-packagist.git /tmp/arizona-bootstrap-packagist
+            rsync --recursive --delete --exclude README.md --exclude composer.json dist/* /tmp/arizona-bootstrap-packagist/docs${AZ_REVIEW_BASEURL}
+            cd /tmp/arizona-bootstrap-packagist
+            git add .
+            git commit -m "Update Arizona Bootstrap Packagist for ${AZ_VERSION}"
+            git push
+            unset GIT_SSH_COMMAND
+            rm ${HOME}/.ssh/az_bootstrap_packagist_deploy_key
+          )
       - name: Back to dev
         if: ${{ endsWith(env.AZ_VERSION, '-dev') == false }}
         run: |
