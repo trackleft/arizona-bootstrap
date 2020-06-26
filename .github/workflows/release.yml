@@ -74,7 +74,7 @@ jobs:
             git config --global user.name "${GITHUB_ACTOR}"
             export GIT_SSH_COMMAND="ssh -i ${HOME}/.ssh/az_bootstrap_packagist_deploy_key"
             git clone git@github.com:az-digital/arizona-bootstrap-packagist.git /tmp/arizona-bootstrap-packagist
-            rsync --recursive --delete --exclude README.md --exclude composer.json dist/* /tmp/arizona-bootstrap-packagist/docs${AZ_REVIEW_BASEURL}
+            rsync --recursive --delete --exclude README.md --exclude composer.json dist/ /tmp/arizona-bootstrap-packagist/
             cd /tmp/arizona-bootstrap-packagist
             git add .
             git commit -m "Update Arizona Bootstrap Packagist for ${AZ_VERSION}"
