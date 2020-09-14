@@ -1,0 +1,23 @@
+name: Create Release
+on:
+  push:
+    branches:
+      - repo-dispatch-test
+
+jobs:
+  dispatch:
+      needs: release
+      strategy:
+        matrix:
+          repo:
+            - az-digital/arizona-bootstrap-packagist
+            - az-digital/digital.arizona.edu
+            - az-digital/arizona-bootstrap
+      runs-on: ubuntu-latest
+      steps:
+        - name: Repository Dispatch
+          uses: peter-evans/repository-dispatch@v1
+          with:
+            token: ${{ secrets.REPO_ACCESS_TOKEN }}
+            repository: ${{ matrix.repo }}
+            event-type: release
