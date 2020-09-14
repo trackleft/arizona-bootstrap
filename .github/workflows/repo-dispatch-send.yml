@@ -6,7 +6,6 @@ on:
 
 jobs:
   dispatch:
-      needs: release
       strategy:
         matrix:
           repo:
