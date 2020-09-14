@@ -20,3 +20,4 @@ jobs:
             token: ${{ secrets.REPO_ACCESS_TOKEN }}
             repository: ${{ matrix.repo }}
             event-type: release
+            client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
