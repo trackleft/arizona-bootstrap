@@ -12,6 +12,7 @@ jobs:
             - az-digital/arizona-bootstrap-packagist
             - az-digital/digital.arizona.edu
             - az-digital/arizona-bootstrap
+            - az-digital/repo-dispatch-test
       runs-on: ubuntu-latest
       steps:
         - name: Repository Dispatch
