@@ -7,10 +7,9 @@
 
 import $ from 'jquery'
 import Util from '../../node_modules/bootstrap/js/src/util.js'
-
 /**
  * ------------------------------------------------------------------------
- * Constants
+ * Constants dasfdasfa
  * ------------------------------------------------------------------------
  */
 
