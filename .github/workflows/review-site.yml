@@ -35,7 +35,7 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.AZ_DOCKER_REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.AZ_DOCKER_REGISTRY_TOKEN }}
       - name: Search for Docker image
@@ -93,27 +93,26 @@ jobs:
           echo "AZ_BOOTSTRAP_FROZEN_DIR=/azbuild/arizona-bootstrap" >> ${GITHUB_ENV}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Docker authentication
-        run: |
-          docker login "$AZ_DOCKER_REGISTRY" -u "$GITHUB_ACTOR" -p ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.AZ_DOCKER_REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.AZ_DOCKER_REGISTRY_TOKEN }}
       - name: Search for Docker image
         id: dockerpull
         continue-on-error: true
         run: |
-          docker pull "$AZ_EPHEMERAL_IMAGE"
+          docker pull "${{ env.AZ_EPHEMERAL_IMAGE }}"
       - name: Conditionally rebuild and save the Docker image
         if: ${{ steps.dockerpull.outcome == 'failure' }}
-        run: |
-          workingtitle=$(docker build -q . )
-          tempname="old${AZ_OLD_HASH}"
-          docker run --name "$tempname" "$workingtitle" true
-          docker cp -a "${tempname}:${AZ_BOOTSTRAP_FROZEN_DIR}/." .
-          docker rm "$tempname"
-          lockhash=${{ hashFiles('Dockerfile', 'package.json', 'package-lock.json', 'scripts/*') }}
-          ephemeral="${AZ_IMAGE_STEM}${lockhash}"
-          docker tag "$workingtitle" "$ephemeral"
-          docker push "$ephemeral"
-          echo "AZ_EPHEMERAL_IMAGE=${ephemeral}" >> ${GITHUB_ENV}
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ env.AZ_EPHEMERAL_IMAGE }}
+          cache-from: type=registry,ref=${{ env.AZ_EPHEMERAL_IMAGE }}
+          cache-to: type=registry,ref=${{ env.AZ_EPHEMERAL_IMAGE }}
       - name: Build variables
         run: |
           echo "AZ_REVIEW_BASEURL=/arizona-bootstrap/${AZ_TRIMMED_REF}" >> ${GITHUB_ENV}
